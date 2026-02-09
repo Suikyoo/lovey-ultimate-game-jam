@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://iytsv2a1pgk4"]
+
+[ext_resource type="Script" uid="uid://6jn0lldis2dk" path="res://scripts/structure.gd" id="1_cjacc"]
+[ext_resource type="PackedScene" uid="uid://bi8qt82wl4vlg" path="res://scenes/progress_bar.tscn" id="2_8t6i7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjacc"]
+size = Vector2(32, 32)
+
+[node name="Structure" type="Area2D" unique_id=1736983384]
+script = ExtResource("1_cjacc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2120018079]
+shape = SubResource("RectangleShape2D_cjacc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=745337920]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 1
+
+[node name="ProgressBar" parent="." unique_id=1116399102 instance=ExtResource("2_8t6i7")]
+offset_left = -17.0
+offset_top = -26.0
+offset_right = -17.0
+offset_bottom = -26.0
+curr_value = 0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

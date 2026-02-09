@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://y81bvm88y64o"]
+
+[ext_resource type="Script" uid="uid://xbcykoohcckr" path="res://scripts/player.gd" id="1_p0vlq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5q5h1"]
+radius = 4.0
+
+[node name="Player" type="CharacterBody2D" unique_id=560884541]
+script = ExtResource("1_p0vlq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028723162]
+shape = SubResource("CircleShape2D_5q5h1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1798982852]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = 9.0
+color = Color(1, 0, 0, 1)

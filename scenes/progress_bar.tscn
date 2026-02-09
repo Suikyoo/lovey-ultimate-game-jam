@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bi8qt82wl4vlg"]
+
+[ext_resource type="Script" uid="uid://o7sp8poh1qa2" path="res://scripts/progress_bar.gd" id="1_vt3ux"]
+
+[node name="ProgressBar" type="Control" unique_id=1116399102]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vt3ux")
+outline_color = Color(1, 1, 1, 1)

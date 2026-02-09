@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://6f1i05f7rp5o"]
+
+[ext_resource type="Script" uid="uid://d1ouddwr2ygek" path="res://scripts/world.gd" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://y81bvm88y64o" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://iytsv2a1pgk4" path="res://scenes/structure.tscn" id="3_lnu2h"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_yqjtg"]
+
+[sub_resource type="TileSet" id="TileSet_lnu2h"]
+sources/0 = SubResource("TileSetScenesCollectionSource_yqjtg")
+
+[node name="Game" type="Node2D" unique_id=452362615]
+script = ExtResource("1_uwrxv")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1731882751]
+tile_set = SubResource("TileSet_lnu2h")
+
+[node name="Player" parent="." unique_id=560884541 instance=ExtResource("2_yqjtg")]
+
+[node name="Structure" parent="." unique_id=439383298 instance=ExtResource("3_lnu2h")]
+position = Vector2(110, -3)
+
+[node name="Structure2" parent="." unique_id=1736983384 instance=ExtResource("3_lnu2h")]
+position = Vector2(110, 106)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1061504015]
